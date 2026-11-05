@@ -21,7 +21,7 @@
     "defaults and fully supports es6-module",
     "maintained node versions"
   ],
-  "author": "",
+  "author": "江小鱼",
   "dependencies": {
     "@babel/runtime": "^7.24.4",
     "@tarojs/components": "4.1.9",
