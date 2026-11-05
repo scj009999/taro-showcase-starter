@@ -1,0 +1,202 @@
+@import '../../styles/variables.scss';
+
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #12233d 0%, #0b1626 60%, #0a1220 100%);
+  padding: 56px 32px 64px;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 161, 90, 0.28) 0%, rgba(200, 161, 90, 0) 68%);
+}
+
+.hero-inner {
+  position: relative;
+}
+
+.hero-eyebrow {
+  display: block;
+  font-size: 22px;
+  color: $gold;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  display: block;
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  line-height: 1.25;
+}
+
+.hero-desc {
+  display: block;
+  margin-top: 20px;
+  font-size: 25px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.hero-pills {
+  display: flex;
+  margin-top: 32px;
+}
+
+.hero-pill {
+  padding: 8px 20px;
+  margin-right: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* 分类 */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 28px 0 4px;
+}
+
+.tab {
+  padding: 10px 24px;
+  margin: 0 14px 14px 0;
+  border-radius: 999px;
+  font-size: 24px;
+  color: $ink-2;
+  background: #ffffff;
+  border: 1px solid $line;
+}
+
+.tab-on {
+  color: #ffffff;
+  background: $navy;
+  border-color: $navy;
+  font-weight: 600;
+}
+
+/* 列表 */
+.list {
+  display: block;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 26px 24px;
+  margin-bottom: 20px;
+}
+
+.item-icon {
+  width: 104px;
+  height: 104px;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.item-icon-text {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.item-main {
+  flex: 1;
+  margin-left: 24px;
+  overflow: hidden;
+}
+
+.item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: $ink;
+}
+
+.item-arrow {
+  font-size: 34px;
+  color: #c2ccd8;
+  line-height: 1;
+  margin-left: 12px;
+}
+
+.item-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 23px;
+  color: $muted;
+}
+
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.item-tag {
+  padding: 4px 14px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background: #f2f5fa;
+  font-size: 21px;
+  color: #5b6b7d;
+}
+
+/* 关于入口 */
+.about-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 32px 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #16263f 0%, #0d1828 100%);
+}
+
+.about-title {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.about-sub {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.about-arrow {
+  font-size: 40px;
+  color: $gold;
+  line-height: 1;
+}
+
+.footer {
+  display: block;
+  margin: 40px 0 8px;
+  text-align: center;
+  font-size: 21px;
+  color: #9aa7b6;
+  line-height: 1.7;
+}

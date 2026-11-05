@@ -1,0 +1,58 @@
+@import './styles/variables.scss';
+
+page {
+  background: $bg;
+  color: $ink;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+view,
+text {
+  box-sizing: border-box;
+}
+
+.wrap {
+  padding: 0 28px;
+}
+
+/* 通用卡片 */
+.card {
+  background: $card;
+  border-radius: 24px;
+  border: 1px solid $line;
+  overflow: hidden;
+}
+
+/* 区块标题 */
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 44px 0 20px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-sub {
+  font-size: 22px;
+  color: $muted;
+}
+
+/* 标签 */
+.chip {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 22px;
+  color: $ink-2;
+  background: #f0f3f8;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}

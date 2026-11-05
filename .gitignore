@@ -1,0 +1,32 @@
+# 构建产物
+dist/
+dist-h5/
+.miniapp/
+deploy_versions/
+.temp/
+.rn_temp/
+.swc/
+.swc
+
+# 依赖
+node_modules/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 本地环境变量（.env.development 这类要提交，本地覆盖不提交）
+.env.local
+.env.*.local
+*.local
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 微信开发者工具
+project.private.config.json

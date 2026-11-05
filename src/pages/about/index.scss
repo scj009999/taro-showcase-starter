@@ -1,0 +1,189 @@
+@import '../../styles/variables.scss';
+
+.about {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.profile {
+  position: relative;
+  padding: 56px 32px 44px;
+  background: linear-gradient(160deg, #12233d 0%, #0b1626 100%);
+  border-radius: 0 0 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-glow {
+  position: absolute;
+  top: -100px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 161, 90, 0.25) 0%, rgba(200, 161, 90, 0) 70%);
+}
+
+.avatar {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #c8a15a, #8f6f2f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-text {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.profile-name {
+  position: relative;
+  margin-top: 26px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.profile-role {
+  position: relative;
+  margin-top: 10px;
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+.intro-card {
+  margin-top: -28px;
+  padding: 30px 26px;
+  position: relative;
+}
+
+.intro-text {
+  font-size: 26px;
+  line-height: 1.85;
+  color: $ink-2;
+}
+
+/* 服务 */
+.services {
+  display: block;
+}
+
+.service {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.service-no {
+  width: 62px;
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: $gold;
+  letter-spacing: 1px;
+  padding-top: 4px;
+}
+
+.service-main {
+  flex: 1;
+}
+
+.service-title {
+  display: block;
+  font-size: 27px;
+  font-weight: 600;
+  color: $ink;
+}
+
+.service-desc {
+  display: block;
+  margin-top: 6px;
+  font-size: 23px;
+  color: $muted;
+  line-height: 1.65;
+}
+
+/* 联系方式 */
+.contacts {
+  padding: 4px 26px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-top: 1px solid $line;
+}
+
+.contact-first {
+  border-top: none;
+}
+
+.contact-label {
+  font-size: 25px;
+  color: $muted;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
+}
+
+.contact-value {
+  font-size: 26px;
+  color: $ink;
+  font-weight: 500;
+}
+
+.contact-empty {
+  color: #b6c0cc;
+  font-weight: 400;
+}
+
+.contact-copy {
+  margin-left: 18px;
+  padding: 6px 18px;
+  border-radius: 10px;
+  background: #f2f5fa;
+  font-size: 21px;
+  color: $ink-2;
+}
+
+.about-tip {
+  display: block;
+  margin-top: 36px;
+  font-size: 22px;
+  color: #9aa7b6;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.back {
+  margin: 40px auto 0;
+  width: 300px;
+  height: 88px;
+  border-radius: 16px;
+  background: $navy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-text {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 600;
+}

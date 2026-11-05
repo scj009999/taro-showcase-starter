@@ -1,0 +1,277 @@
+@import '../../styles/variables.scss';
+
+.detail {
+  min-height: 100vh;
+  padding-bottom: 180px;
+}
+
+.head {
+  position: relative;
+  padding: 40px 32px 36px;
+  background: linear-gradient(160deg, #12233d 0%, #0b1626 100%);
+  border-radius: 0 0 36px 36px;
+  overflow: hidden;
+}
+
+.head-glow {
+  position: absolute;
+  top: -140px;
+  left: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 161, 90, 0.22) 0%, rgba(200, 161, 90, 0) 70%);
+}
+
+.head-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.head-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.head-icon-text {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.head-info {
+  margin-left: 24px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.head-name {
+  display: block;
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.head-sub {
+  display: block;
+  margin-top: 8px;
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.head-tags {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.head-tag {
+  padding: 6px 18px;
+  margin-right: 14px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.intro {
+  display: block;
+  margin-top: 32px;
+  font-size: 26px;
+  line-height: 1.85;
+  color: $ink-2;
+}
+
+/* 亮点 */
+.points {
+  padding: 8px 26px;
+}
+
+.point {
+  display: flex;
+  padding: 22px 0;
+  border-bottom: 1px solid $line;
+}
+
+.point:last-child {
+  border-bottom: none;
+}
+
+.point-no {
+  width: 64px;
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: $gold;
+  letter-spacing: 1px;
+  padding-top: 4px;
+}
+
+.point-text {
+  flex: 1;
+  font-size: 26px;
+  line-height: 1.75;
+  color: $ink;
+}
+
+/* 功能 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  width: 48.4%;
+  padding: 24px 22px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  color: $ink;
+}
+
+.feature-desc {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.65;
+  color: $muted;
+}
+
+/* 场景 */
+.scenes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scene {
+  padding: 12px 24px;
+  margin: 0 14px 14px 0;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid $line;
+  font-size: 24px;
+  color: $ink-2;
+}
+
+/* 交付 */
+.specs {
+  padding: 4px 26px;
+}
+
+.spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-top: 1px solid $line;
+}
+
+.spec-first {
+  border-top: none;
+}
+
+.spec-label {
+  width: 168px;
+  flex-shrink: 0;
+  font-size: 24px;
+  color: $muted;
+}
+
+.spec-value {
+  flex: 1;
+  text-align: right;
+  font-size: 24px;
+  color: $ink;
+  line-height: 1.6;
+}
+
+.tip {
+  display: block;
+  margin: 36px 0 8px;
+  font-size: 22px;
+  color: #9aa7b6;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* 底部操作条 */
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 18px 28px calc(18px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid $line;
+}
+
+.bar-btn {
+  flex: 1;
+  height: 88px;
+  border-radius: 16px;
+  border: 1px solid $line;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+}
+
+.bar-btn:last-child {
+  margin-right: 0;
+}
+
+.bar-btn-primary {
+  flex: 1.4;
+  background: $navy;
+  border-color: $navy;
+}
+
+.bar-btn-text {
+  font-size: 27px;
+  color: $ink;
+}
+
+.bar-btn-primary .bar-btn-text {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 空状态 */
+.empty {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-text {
+  font-size: 28px;
+  color: $muted;
+}
+
+.empty-btn {
+  margin-top: 32px;
+  padding: 16px 44px;
+  border-radius: 999px;
+  background: $navy;
+  color: #ffffff;
+  font-size: 26px;
+}
