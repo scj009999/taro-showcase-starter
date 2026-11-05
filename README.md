@@ -209,7 +209,7 @@ pages: [
 
 ## 遇到报错看这里
 
-先把这份看完：[docs/PITFALLS.md](docs/PITFALLS.md) —— 收录了 10 个新手一定会撞上的坑，每个都有"报错原文 → 原因 → 怎么修"。目录像这样：
+先把这份看完：[docs/PITFALLS.md](docs/PITFALLS.md) —— 收录了 14 个新手一定会撞上的坑，每个都有"报错原文 → 原因 → 怎么修"。目录像这样：
 
 | 报错 | 一句话原因 |
 |---|---|
@@ -217,6 +217,7 @@ pages: [
 | `'padStart' does not exist` | 小程序不支持这个 API，用 `slice(-2)` 替代 |
 | 模拟器一片空白 | 导入时选了项目根目录，要选 `dist` |
 | `npm install` 卡住不动 | 没换国内镜像 |
+| `dev:h5` 启动就崩 `_writeVirtualFile` | Taro 依赖预打包的兼容问题，模板已关闭该特性 |
 | Sass 一堆 `@import` 警告 | 只是警告，不影响运行 |
 
 ---

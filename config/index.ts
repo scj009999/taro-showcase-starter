@@ -30,7 +30,16 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       }
     },
     framework: 'react',
-    compiler: 'webpack5',
+    // 关闭依赖预打包(prebundle)。
+    // 开启时 dev:h5 会报 `finalInputFileSystem._writeVirtualFile is not a function` 并崩溃，
+    // 这是 Taro 的 prebundle 与 webpack-virtual-modules 在部分环境下的兼容问题。
+    // 关掉后开发服务器启动稍慢几秒，但不会再崩。
+    compiler: {
+      type: 'webpack5',
+      prebundle: {
+        enable: false
+      }
+    },
     cache: {
       enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     },

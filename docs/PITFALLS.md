@@ -232,6 +232,35 @@ npm install
 
 ---
 
+## 五、H5 预览的问题
+
+### 14. `npm run dev:h5` 启动就崩溃：`finalInputFileSystem._writeVirtualFile is not a function`
+
+```
+TypeError: finalInputFileSystem._writeVirtualFile is not a function
+    at VirtualModulesPlugin.writeModule (webpack-virtual-modules/src/index.ts:200:26)
+    at TaroPrebundle (webpack5-prebundle/src/index.ts:144:23)
+```
+
+**原因**：Taro 为了加快开发服务器启动，会自动预打包依赖（prebundle），这一步用到了 `webpack-virtual-modules`。在部分环境（Windows + Node 20/22）下这个组合会抛异常，直接进程退出。注意 `npm run build:h5` 不会触发，只有 `dev` 会 —— 所以很容易误判成"代码有问题"。
+
+**怎么修**：在 `config/index.ts` 里关掉预打包。本模板已经关了，如果你是自己新建的 Taro 项目，找到 `compiler` 这一行改成对象写法：
+
+```ts
+compiler: {
+  type: 'webpack5',
+  prebundle: {
+    enable: false
+  }
+}
+```
+
+代价是开发服务器首次启动慢几秒，但不会再崩。
+
+**为什么不是别的原因**：报错栈里出现 `webpack-virtual-modules` 和 `webpack5-prebundle` 这两个包名，就一定是这个原因，不用去查自己的业务代码。
+
+---
+
 ## 还没解决？
 
 按这个顺序排查，能解决绝大多数问题：
